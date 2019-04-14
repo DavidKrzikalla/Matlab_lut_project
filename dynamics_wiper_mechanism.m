@@ -1,5 +1,4 @@
 %% Wiper mechanism solved for kinematics response on given force
-
 clc
 
 wiper_mechanism %load of geometry and neccessary variables

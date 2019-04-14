@@ -10,7 +10,7 @@ xD = 0.087;
 yD = 0.10624;
 
 %Inital rotational speed
-omega0 = 4;
+omega0 = 4; % driving angular velocity
 tend = 2; %final time of analysis
 dt = 0.001; % time step
 
@@ -29,7 +29,7 @@ gamma0 = 180 + atand((yD-yC)/(xD-xC));
 xG4 = xC + L4/2*cosd(gamma0);
 yG4 = yC + L4/2*sind(gamma0);
 
-%Check of shape
+%Check of shape plot
 figure
 scatter(xD,yD)
 hold on
@@ -42,6 +42,7 @@ scatter(xG4,yG4)
 scatter(0,0)
 plot([0,xB,xC,xG4],[0,yB,yC,yG4],'-o')
 plot(0, 0, '*', 'LineWidth', 2)
+plot(xD, yD, '*', 'LineWidth', 2)
 title('Mechanism scheme')
 
 %% Coordinates
